@@ -1219,13 +1219,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c427d5e72da7b634cbc8f0861d5c9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainGameCanvas: {fileID: 0}
-  upgradeCanvas: {fileID: 0}
-  chillCountText: {fileID: 0}
-  chillPerSecText: {fileID: 0}
-  pondObj: {fileID: 0}
+  MainGameCanvas: {fileID: 1123067084}
+  upgradeCanvas: {fileID: 1872648475}
+  chillCountText: {fileID: 836240623}
+  chillPerSecText: {fileID: 1754794452}
+  pondObj: {fileID: 1606117537}
   pondTextPopup: {fileID: 0}
-  backgroundObj: {fileID: 0}
+  backgroundObj: {fileID: 113016823}
   upgradeUIToSpawn: {fileID: 0}
   upgradeUIParent: {fileID: 0}
   ChillPerSecObjToSpawn: {fileID: 0}
@@ -1627,7 +1627,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1606117539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104844946}
+        m_TargetAssemblyTypeName: PondManager, Assembly-CSharp
+        m_MethodName: OnChillClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1754794450
 GameObject:
   m_ObjectHideFlags: 0
