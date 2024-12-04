@@ -81,4 +81,26 @@ public class PondManager : MonoBehaviour
         chillPerSecText.text = CurrentChillPerSec.ToString() + "Chill/S";
     }
     #endregion
+
+    #region button presses
+    public void OnUpgradeButtonpress() 
+    {
+        MainGameCanvas.SetActive(false);
+        upgradeCanvas.SetActive(true);
+    }
+    public void OnResumeButtonpress() 
+    {
+        upgradeCanvas.SetActive(false);
+        MainGameCanvas.SetActive(true);
+    }
+    #endregion
+
+    #region Simple increases
+    public void SimplePondIncreases(double amount)
+    {
+        CurrentChillCount += amount;
+        UpdateChillUI();
+
+    }
+    #endregion
 }
