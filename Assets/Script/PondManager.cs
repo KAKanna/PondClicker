@@ -11,22 +11,26 @@ public class PondManager : MonoBehaviour
     public GameObject MainGameCanvas;
     [SerializeField] private GameObject upgradeCanvas;
     [SerializeField] private TextMeshProUGUI chillCountText;
-    [SerializeField] private TextMeshProUGUI chillPerSecText;
+    [SerializeField] private TextMeshProUGUI chillPerSecondText;
     [SerializeField] private GameObject pondObj;
     public GameObject pondTextPopup;
     [SerializeField] private GameObject backgroundObj;
 
     [Space]
+    public PondUpgrade[] PondUpgrades;
     [SerializeField] private GameObject upgradeUIToSpawn;
     [SerializeField] private Transform upgradeUIParent;
     public GameObject ChillPerSecObjToSpawn;
 
     public double CurrentChillCount {  get; set; }
-    public double CurrentChillPerSec { get; set; }
+    public double CurrentChillPerSecond { get; set; }
 
     //เขตอัพของ
 
     public double ChillPerClickUpgrade { get; set; }
+
+    private InitializeUpgrades initializeUpgrades;
+    private ChillDisplay chillDisplay;
 
     private void Awake()
     {
@@ -35,11 +39,16 @@ public class PondManager : MonoBehaviour
             instance = this;
         }
 
+        chillDisplay = GetComponent<ChillDisplay>();
+
         UpdateChillUI();
         UpdateChillPerSecondUI();
 
         upgradeCanvas.SetActive(false);
         MainGameCanvas.SetActive(true);
+
+        initializeUpgrades = GetComponent<InitializeUpgrades>();
+        initializeUpgrades.Initialize(PondUpgrades, upgradeUIToSpawn, upgradeUIParent);
     }
 
     #region On Clicked
@@ -73,16 +82,18 @@ public class PondManager : MonoBehaviour
     //อัพเดต
     private void UpdateChillUI()
     {
-        chillCountText.text = CurrentChillCount.ToString();
+        //chillCountText.text = CurrentChillCount.ToString();
+        chillDisplay.UpdateChillText(CurrentChillCount,chillCountText);
     }
 
     private void UpdateChillPerSecondUI()
     {
-        chillPerSecText.text = CurrentChillPerSec.ToString() + "Chill/S";
+        //chillPerSecondText.text = CurrentChillPerSecond.ToString() + "Chill/S";
+        chillDisplay.UpdateChillText(CurrentChillPerSecond,chillPerSecondText, " Chill/S");
     }
     #endregion
 
-    #region button presses
+    #region Button presses
     public void OnUpgradeButtonpress() 
     {
         MainGameCanvas.SetActive(false);
@@ -96,17 +107,36 @@ public class PondManager : MonoBehaviour
     #endregion
 
     #region Simple increases
-    public void SimplePondIncreases(double amount)
+    public void SimpleChillIncreases(double amount)
     {
         CurrentChillCount += amount;
         UpdateChillUI();
         
     }
-    public void SimplePondPerSecondIncrease(double amount)
+    public void SimpleChillPerSecondIncrease(double amount)
     {
-        CurrentChillCount += amount; 
+        CurrentChillPerSecond += amount; 
         UpdateChillPerSecondUI();
 
     }
+    #endregion
+
+    #region Event
+
+    public void OnUpgradeButtononClick(PondUpgrade upgrade,UpgradeButtonRef buttonRef)
+    {
+        if(CurrentChillCount >= upgrade.CurrentUpgradeCost)
+        {
+            upgrade.ApplyUpgrade();
+
+            CurrentChillCount -= upgrade.CurrentUpgradeCost;
+            UpdateChillUI();
+
+            upgrade.CurrentUpgradeCost = Mathf.Round((float)(upgrade.CurrentUpgradeCost * (1 + upgrade.CostIncreasePerPurchase)));
+
+            buttonRef.UpgradeCostText.text = "Cost: " + upgrade.CurrentUpgradeCost;
+        }
+    }
+
     #endregion
 }

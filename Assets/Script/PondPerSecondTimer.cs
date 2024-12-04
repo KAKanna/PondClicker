@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PondPerSecondTimer : MonoBehaviour
 {
-   public float TimerDuration = 1.0f;
-    public double PondperSecond {  get;  set; }
-    private float _counter;
+   public float TimerDuration = 1f;
+    public double ChillperSecond {  get;  set; }
+    private float counter;
     private void Update()
     {
-        _counter += Time.deltaTime;
-        if (TimerDuration >= _counter )
+        counter += Time.deltaTime;
+        if (counter >= TimerDuration )
         {
-            PondManager.instance.SimplePondIncreases(PondperSecond);
+            PondManager.instance.SimpleChillIncreases(ChillperSecond);
+
+            counter = 0;
         }    
     }
 }

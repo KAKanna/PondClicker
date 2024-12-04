@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88ed8987c05cb144dba07689411bf2d3, type: 3}
-  m_Name: Pond per Second
+  m_Name: Chill per Second 3
   m_EditorClassIdentifier: 
-  UpgradeAmount: 1
-  OriginalUpgradeCost: 100
-  CurrentUpgradeCost: 100
-  CostIncreasePerPurchase: 0.05000000074505806
-  UpgradeButtonText: 
-  UpgradeButtonDesscription: 
+  UpgradeAmount: 10
+  OriginalUpgradeCost: 7500
+  CurrentUpgradeCost: 7500
+  CostIncreasePerPurchase: 0.08
+  UpgradeButtonText: 10CPS
+  UpgradeButtonDescription: Increase your chill power per second by {0}
