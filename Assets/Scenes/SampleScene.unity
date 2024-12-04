@@ -1069,7 +1069,7 @@ RectTransform:
   m_Father: {fileID: 1298026835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1190,6 +1190,8 @@ GameObject:
   - component: {fileID: 1104844945}
   - component: {fileID: 1104844946}
   - component: {fileID: 1104844947}
+  - component: {fileID: 1104844948}
+  - component: {fileID: 1104844949}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1227,9 +1229,9 @@ MonoBehaviour:
   MainGameCanvas: {fileID: 1123067084}
   upgradeCanvas: {fileID: 1872648475}
   chillCountText: {fileID: 836240623}
-  chillPerSecondText: {fileID: 0}
+  chillPerSecondText: {fileID: 1754794452}
   pondObj: {fileID: 1606117537}
-  pondTextPopup: {fileID: 0}
+  pondTextPopup: {fileID: 9014357087959522757, guid: 5ee80a4326e29fa4fa2c911cfdebbcda, type: 3}
   backgroundObj: {fileID: 113016823}
   PondUpgrades:
   - {fileID: 11400000, guid: 1412fd027cfae014fbbd2edcd333c0b2, type: 2}
@@ -1257,6 +1259,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 736c34a6a7325e44a85d75ddc05365b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1104844948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104844944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb588f5adb25c844b3265be74a824c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1104844949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104844944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166f11da7747bb04681d04a9a90d075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1123067084
@@ -1958,7 +1984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1872648476
 RectTransform:
   m_ObjectHideFlags: 0

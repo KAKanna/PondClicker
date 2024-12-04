@@ -58,6 +58,8 @@ public class PondManager : MonoBehaviour
 
         pondObj.transform.DOBlendableScaleBy(new Vector3(0.10f, 0.05f, 0.10f), 0.10f).OnComplete(PondscaleBack);
         backgroundObj.transform.DOBlendableScaleBy(new Vector3(0.0f, 0.0f, 0.0f), 0.0f).OnComplete(BackgroundScaleBack);
+
+        PopUpText.Create(1 + ChillPerClickUpgrade);
     }
 
     private void PondscaleBack()
