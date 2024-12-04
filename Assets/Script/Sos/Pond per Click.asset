@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bc4b661791588d48b365d0fbb041267, type: 3}
-  m_Name: Cookies per Click
+  m_Name: Pond per Click
   m_EditorClassIdentifier: 
   UpgradeAmount: 1
-  OriginalUpgradeCost: 50
-  CurrentUpgradeCost: 50
-  CostIncreasePerPurchase: 0.08
-  UpgradeButtonText: 1 CPS
-  UpgradeButtonDesscription: Your Pond per second by {0}
+  OriginalUpgradeCost: 100
+  CurrentUpgradeCost: 100
+  CostIncreasePerPurchase: 0.05000000074505806
+  UpgradeButtonText: 
+  UpgradeButtonDesscription: 

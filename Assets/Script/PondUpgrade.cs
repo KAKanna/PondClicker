@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CookieUpgrade : ScriptableObject
+public abstract class PondUpgrade : ScriptableObject
 {
     public float UpgradeAmount = 1f;
     public double OriginalUpgradeCost = 100;

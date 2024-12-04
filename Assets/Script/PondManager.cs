@@ -100,6 +100,12 @@ public class PondManager : MonoBehaviour
     {
         CurrentChillCount += amount;
         UpdateChillUI();
+        
+    }
+    public void SimplePondPerSecondIncrease(double amount)
+    {
+        CurrentChillCount += amount; 
+        UpdateChillPerSecondUI();
 
     }
     #endregion

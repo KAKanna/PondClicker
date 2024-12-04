@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Cookie Upgrade/Cookies Per Second", fileName = "Cookies per Second")]
-public class CookieUpgradeperSecond : CookieUpgrade
+[CreateAssetMenu(menuName = "Pond Upgrade/Pond per Second", fileName = "Pond per Second")]
+public class PondUpgradeperSecond : PondUpgrade
 {
     public override void ApplyUpgrade()
     {
