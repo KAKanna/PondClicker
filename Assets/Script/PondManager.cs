@@ -84,7 +84,7 @@ public class PondManager : MonoBehaviour
 
     #region UI Update
     //อัพเดต
-    private void UpdateChillUI()
+    public void UpdateChillUI()
     {
         //chillCountText.text = CurrentChillCount.ToString();
         chillDisplay.UpdateChillText(CurrentChillCount,chillCountText);
