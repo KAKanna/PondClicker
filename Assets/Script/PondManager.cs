@@ -14,6 +14,7 @@ public class PondManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI chillPerSecondText;
     [SerializeField] private GameObject pondObj;
     public GameObject pondTextPopup;
+    [SerializeField] private AudioSource pondSoundClick;
     [SerializeField] private GameObject backgroundObj;
 
     [Space]
@@ -60,6 +61,7 @@ public class PondManager : MonoBehaviour
         backgroundObj.transform.DOBlendableScaleBy(new Vector3(0.0f, 0.0f, 0.0f), 0.0f).OnComplete(BackgroundScaleBack);
 
         PopUpText.Create(1 + ChillPerClickUpgrade);
+        pondSoundClick.Play();
     }
 
     private void PondscaleBack()
