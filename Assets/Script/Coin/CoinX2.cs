@@ -8,7 +8,6 @@ public class CoinX2 : CoinManager
     [SerializeField] private AudioClip soundEnd;
 
     private AudioSource audioSource;
-    private AudioSource audioSource2;
     private bool isGone = false;
     private float time = 4;
     private void Start()
