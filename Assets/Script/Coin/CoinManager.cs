@@ -4,7 +4,7 @@ using UnityEngine;
 
  public class CoinManager : MonoBehaviour
 {
-    private float speed = 700f;
+    private float speed = 200f;
     //abstract public void Move();
     public virtual void OnClick()
     {

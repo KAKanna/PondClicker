@@ -26,7 +26,7 @@ public class CoinX3 : CoinManager
 
     public override void OnClick()
     {
-        time = 0.2f;
+        time = 0.1f;
         audioSource.PlayOneShot(soundEnd);           
         PondManager.instance.CurrentChillCount *= 3;
         PondManager.instance.UpdateChillUI();
