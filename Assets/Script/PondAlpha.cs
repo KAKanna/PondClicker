@@ -8,7 +8,7 @@ public class PondAlpha : MonoBehaviour
     private Image head_pond;
     private void Awake()
     {
-        head_pond = gameObject.AddComponent<Image>();
-        head_pond.alphaHitTestMinimumThreshold = 0.001f;
+        //head_pond = gameObject.AddComponent<Image>();
+        //head_pond.alphaHitTestMinimumThreshold = 0.001f;
     }
 }
