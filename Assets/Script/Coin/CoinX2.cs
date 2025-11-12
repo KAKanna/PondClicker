@@ -11,7 +11,6 @@ public class CoinX2 : CoinManager
     private AudioSource audioSource;
     private bool isGone = false;
     private float time = 4;
-    private int wait = 2;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
